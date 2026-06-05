@@ -123,7 +123,7 @@ fetch(
     </div>
     `;
 }
-let t=1800;setInterval(()=>{let m=Math.floor(t/60),s=t%60;let el=document.getElementById('timer');if(el){el.innerHTML=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');}t--;if(t<0)submitTest();},1000);
+let t=2400;setInterval(()=>{let m=Math.floor(t/60),s=t%60;let el=document.getElementById('timer');if(el){el.innerHTML=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');}t--;if(t<0)submitTest();},1000);
 fetch("https://script.google.com/macros/s/AKfycbxZ5Dt35aLPJEdBGxMbwGZlLCL6F9nKaRIRGzkk_2K8HUrgFvAphGiJ7-JMUrpxkeuHBw/exec")
 .then(response => response.json())
 .then(data => {
