@@ -1,4 +1,6 @@
-let current=0;let answers=new Array(questions.length).fill(null);
+let questions = [];
+let current = 0;
+let answers = [];
 function loadQ(){document.getElementById('qno').innerHTML='Question '+(current+1);document.getElementById('question').innerHTML=questions[current].question;let h='';questions[current].options.forEach((o,i)=>{h+=`<div><input type='radio' name='o' ${answers[current]==i?'checked':''} onclick='answers[current]=${i}; palette();'> ${o}</div>`});document.getElementById('options').innerHTML=h;}
 function palette(){
 
@@ -122,4 +124,32 @@ fetch(
     `;
 }
 let t=1800;setInterval(()=>{let m=Math.floor(t/60),s=t%60;let el=document.getElementById('timer');if(el){el.innerHTML=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');}t--;if(t<0)submitTest();},1000);
-palette();loadQ();
+fetch("https://script.google.com/macros/s/AKfycbxZ5Dt35aLPJEdBGxMbwGZlLCL6F9nKaRIRGzkk_2K8HUrgFvAphGiJ7-JMUrpxkeuHBw/exec")
+.then(response => response.json())
+.then(data => {
+
+    questions = data;
+
+    // Convert A/B/C/D answers into option numbers
+    questions.forEach(q => {
+
+        if(q.answer === "A") q.answer = 0;
+        else if(q.answer === "B") q.answer = 1;
+        else if(q.answer === "C") q.answer = 2;
+        else if(q.answer === "D") q.answer = 3;
+
+    });
+
+    answers = new Array(questions.length).fill(null);
+
+    palette();
+    loadQ();
+
+})
+.catch(error => {
+
+    alert("Failed to load questions from Google Sheet");
+
+    console.error(error);
+
+});
