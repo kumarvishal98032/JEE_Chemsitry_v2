@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Chemistry Mock Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top">
+        <h2>JEE Chemistry Mock Test</h2>
+        <div id="timer">30:00</div>
+    </div>
+
+    <div class="container">
+
+        <!-- LEFT PANEL -->
+        <div class="left">
+
+            <label><b>Student Name:</b></label><br>
+            <input type="text"
+                   id="studentName"
+                   placeholder="Enter your name">
+            <br><br>
+
+            <h3 id="qno"></h3>
+
+            <p id="question"></p>
+
+            <div id="options"></div>
+
+            <br>
+
+            <button onclick="prevQ()">Previous</button>
+
+            <button onclick="nextQ()">Save & Next</button>
+
+            <button onclick="submitTest()">
+                Submit Test
+            </button>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+
+            <h3>Question Palette</h3>
+
+            <div id="palette"></div>
+
+            <hr>
+
+            <p>
+                🟩 Answered
+            </p>
+
+            <p>
+                ⬜ Not Answered
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
