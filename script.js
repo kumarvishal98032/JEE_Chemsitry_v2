@@ -88,6 +88,12 @@ fetch(
 
         <hr>
 
+
+    <h2>Student Information</h2>
+
+    <p><b>Name:</b> ${name}</p>
+
+    <hr>
         <h2>Summary</h2>
 
         <p><b>Total Questions:</b> ${questions.length}</p>
