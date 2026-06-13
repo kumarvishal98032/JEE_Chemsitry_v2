@@ -121,10 +121,10 @@ fetch(
         <h2>Performance</h2>
         
         ${
-            score >= 90 ? "<h3>Outstanding ⭐</h3>" :
-            score >= 75 ? "<h3>Excellent ✅</h3>" :
-            score >= 60 ? "<h3>Good 👍</h3>" :
-            score >= 40 ? "<h3>Average 📘</h3>" :
+            score >= 180 ? "<h3>Outstanding ⭐</h3>" :
+            score >= 160 ? "<h3>Excellent ✅</h3>" :
+            score >= 140 ? "<h3>Good 👍</h3>" :
+            score >= 120 ? "<h3>Average 📘</h3>" :
             "<h3>Needs Improvement 📚</h3>"
         }
     </div>
