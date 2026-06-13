@@ -28,6 +28,7 @@ function palette(){
 function gotoQ(i){current=i;loadQ();}
 function nextQ(){if(current<questions.length-1){current++;loadQ();}}
 function prevQ(){if(current>0){current--;loadQ();}}
+function clearResponse(){answers[current] = null;loadQ();palette();}
 function submitTest(){
 
     let score = 0;
