@@ -1,88 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Chemistry Test</title>
-
+    <title>JEE Chemistry Mock Test</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
-<img src="logo.png" width="200">
-    <div class="top">
-        <h2>JEE Chemistry Test (U -1,2)</h2>
-        <div id="timer">40:00</div>
-    </div>
 
-<div style="
-background:#fdecea;
-color:#b71c1c;
-padding:12px;
-text-align:center;
-font-weight:bold;
-font-size:16px;
-border-bottom:2px solid #f44336;">
-⚠️ IMPORTANT: Do not refresh the page, press Back, or close the browser during the test. Your responses may be lost.
+```
+<!-- Watermark Logo -->
+<div id="watermark">
+    <img src="logo.png" alt="Logo">
 </div>
-    
-    <div class="container">
 
-        <!-- LEFT PANEL -->
-        <div class="left">
+<!-- Top Bar -->
+<div class="top">
+    <h2>JEE Chemistry Mock Test</h2>
+    <div id="timer">40:00</div>
+</div>
 
-            <label><b>Student Name:</b></label><br>
-            <input type="text"
-                   id="studentName"
-                   placeholder="Enter your name">
-            <br><br>
+<!-- Main Container -->
+<div class="container">
 
-            <h3 id="qno"></h3>
+    <!-- LEFT PANEL -->
+    <div class="left">
 
-            <p id="question"></p>
+        <p style="color:red;font-weight:bold;">
+            ⚠ Do not refresh the page during the test.
+        </p>
 
-            <div id="options"></div>
+        <label><b>Student Name:</b></label><br>
 
-            <br>
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter your name">
 
-            <button onclick="prevQ()">Previous</button>
+        <br><br>
 
-            <button onclick="clearResponse()">Clear Response</button>
-            
-            <button onclick="nextQ()">Save & Next</button>
+        <h3 id="qno"></h3>
 
-            <button onclick="submitTest()">
-                Submit Test
-            </button>
+        <p id="question"></p>
 
-        </div>
+        <div id="options"></div>
 
-        <!-- RIGHT PANEL -->
-        <div class="right">
+        <br>
 
-            <h3>Question Palette</h3>
+        <button onclick="prevQ()">
+            Previous
+        </button>
 
-            <div id="palette"></div>
+        <button onclick="clearResponse()">
+            Clear Response
+        </button>
 
-            <hr>
+        <button onclick="nextQ()">
+            Save & Next
+        </button>
 
-            <p>
-                🟩 Answered
-            </p>
-
-            <p>
-                ⬜ Not Answered
-            </p>
-
-        </div>
+        <button onclick="submitTest()">
+            Submit Test
+        </button>
 
     </div>
 
-   
-    <script src="script.js"></script>
+    <!-- RIGHT PANEL -->
+    <div class="right">
+
+        <h3>Question Palette</h3>
+
+        <div id="palette"></div>
+
+        <hr>
+
+        <p>🟩 Answered</p>
+
+        <p>⬜ Not Answered</p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+```
 
 </body>
-
 </html>
