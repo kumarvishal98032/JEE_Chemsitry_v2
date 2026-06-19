@@ -56,4 +56,24 @@ button{
     font-size:14px;
 }
 
+#watermark{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+opacity:0.15;
+pointer-events:none;
+z-index:1;
+}
+
+#watermark img{
+width:250px;
+height:auto;
+}
+
+.top,
+.container{
+position:relative;
+z-index:2;
+}
 
